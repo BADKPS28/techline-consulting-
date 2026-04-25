@@ -311,64 +311,91 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-image: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=1920&q=85');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: var(--bg);
 }
 
-/* Dark overlay to keep text readable over image */
+/* Techline2.png — slow Ken Burns zoom */
+.hero__img {
+  position: absolute;
+  inset: -8%;
+  background: url('Techline2.png') center / cover no-repeat;
+  z-index: 0;
+  animation: kenBurns 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes kenBurns {
+  0%   { transform: scale(1)    translate(0%,    0%); }
+  100% { transform: scale(1.12) translate(-2.5%, -2%); }
+}
+
+/* Dark gradient + gold brand tint overlay */
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    108deg,
-    rgba(7, 16, 31, 0.92) 0%,
-    rgba(7, 16, 31, 0.80) 40%,
-    rgba(7, 16, 31, 0.55) 70%,
-    rgba(7, 16, 31, 0.30) 100%
-  );
-  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 65% at 5% 50%, rgba(201, 168, 76, 0.18) 0%, transparent 55%),
+    linear-gradient(108deg,
+      rgba(5,  12, 25, 0.95) 0%,
+      rgba(7,  16, 31, 0.88) 30%,
+      rgba(7,  16, 31, 0.70) 55%,
+      rgba(7,  16, 31, 0.45) 75%,
+      rgba(7,  16, 31, 0.25) 100%
+    );
+  z-index: 1;
   pointer-events: none;
 }
 
-@keyframes orbFloat {
-  0%   { transform: translate(0px,   0px)  scale(1);    }
-  50%  { transform: translate(20px, -25px) scale(1.05); }
-  100% { transform: translate(-15px, 15px) scale(0.97); }
-}
-
-/* Diagonal gold beam */
+/* Diagonal gold light beam */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    115deg,
-    transparent 30%,
-    rgba(201, 168, 76, 0.06) 40%,
-    rgba(201, 168, 76, 0.12) 45%,
-    rgba(201, 168, 76, 0.06) 50%,
+    112deg,
+    transparent 28%,
+    rgba(201, 168, 76, 0.04) 38%,
+    rgba(201, 168, 76, 0.09) 44%,
+    rgba(201, 168, 76, 0.04) 50%,
     transparent 60%
   );
-  z-index: 0;
+  z-index: 2;
   pointer-events: none;
-  animation: beamPulse 6s ease-in-out infinite alternate;
+  animation: beamPulse 7s ease-in-out infinite alternate;
 }
 
 @keyframes beamPulse {
-  0%   { opacity: 0.5; transform: translateX(-20px); }
-  100% { opacity: 1.0; transform: translateX(20px);  }
+  0%   { opacity: 0.4; }
+  100% { opacity: 1.0; }
 }
 
-/* Bottom fade into next section */
+/* Bottom fade */
 .hero::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 200px;
+  height: 220px;
   background: linear-gradient(to top, var(--bg), transparent);
   pointer-events: none;
+  z-index: 3;
+}
+
+/* ── Leadership — Techline.png subtle texture ── */
+#leadership {
+  position: relative;
+  overflow: hidden;
+}
+#leadership::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('Techline.png') center / cover no-repeat;
+  opacity: 0.06;
+  z-index: 0;
+  pointer-events: none;
+}
+#leadership > .container {
+  position: relative;
   z-index: 1;
 }
 
