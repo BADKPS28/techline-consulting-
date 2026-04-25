@@ -311,25 +311,28 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: var(--bg);
+  background:
+    radial-gradient(ellipse 65% 70% at 5%   50%,  rgba(201, 168, 76, 0.30) 0%, transparent 55%),
+    radial-gradient(ellipse 65% 55% at 95%  10%,  rgba(20,  50, 110, 0.80) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 50% at 60%  100%, rgba(14,  32,  75, 0.65) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 35% at 75%  55%,  rgba(201, 168, 76, 0.10) 0%, transparent 50%),
+    linear-gradient(135deg, #060e1a 0%, #0a1830 50%, #07101F 100%);
 }
 
+/* Animated floating gold orb */
 .hero__overlay {
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 60% at 0%   50%,  rgba(201, 168, 76, 0.28) 0%, transparent 60%),
-    radial-gradient(ellipse 55% 50% at 100% 10%,  rgba(30,  60, 120, 0.55) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 45% at 60%  100%, rgba(15,  35,  80, 0.60) 0%, transparent 55%),
-    radial-gradient(ellipse 35% 35% at 75%  55%,  rgba(201, 168, 76, 0.10) 0%, transparent 50%);
+  inset: -10%;
+  background: radial-gradient(ellipse 55% 55% at 25% 55%, rgba(201, 168, 76, 0.13) 0%, transparent 60%);
   z-index: 0;
   animation: auraFloat 16s ease-in-out infinite alternate;
   will-change: transform;
+  pointer-events: none;
 }
 
 @keyframes auraFloat {
   0%   { transform: scale(1)    translate(0px,   0px); }
-  100% { transform: scale(1.07) translate(14px, -20px); }
+  100% { transform: scale(1.1)  translate(20px, -25px); }
 }
 
 /* Bottom fade into next section */
