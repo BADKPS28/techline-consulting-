@@ -331,15 +331,15 @@ img { max-width: 100%; display: block; }
 
 /* techline1 — skyline office — visible first */
 .hero__img--1 {
-  background: url('Techline1.jpeg') center / cover no-repeat;
+  background: url('Techline1.jpeg') center 20% / cover no-repeat;
   opacity: 1;
   transition: opacity 2s ease-in-out;
   animation: kenBurns1 30s ease-in-out infinite alternate;
 }
 
-/* techline2 — boardroom — hidden first */
+/* techline2 — boardroom */
 .hero__img--2 {
-  background: url('Techline2.jpeg') center / cover no-repeat;
+  background: url('Techline2.jpeg') center 25% / cover no-repeat;
   opacity: 0;
   transition: opacity 2s ease-in-out;
   animation: kenBurns2 30s ease-in-out infinite alternate;
@@ -347,7 +347,7 @@ img { max-width: 100%; display: block; }
 
 /* techline3 — logo card */
 .hero__img--3 {
-  background: url('Techline3.jpeg') center / cover no-repeat;
+  background: url('Techline3.jpeg') center 30% / cover no-repeat;
   opacity: 0;
   transition: opacity 2s ease-in-out;
   animation: kenBurns1 30s ease-in-out infinite alternate;
@@ -355,7 +355,7 @@ img { max-width: 100%; display: block; }
 
 /* techline4 — logo clean */
 .hero__img--4 {
-  background: url('Techline4.jpeg') center / cover no-repeat;
+  background: url('Techline4.jpeg') center 30% / cover no-repeat;
   opacity: 0;
   transition: opacity 2s ease-in-out;
   animation: kenBurns2 30s ease-in-out infinite alternate;
@@ -407,11 +407,11 @@ img { max-width: 100%; display: block; }
   background:
     radial-gradient(ellipse 60% 65% at 5% 50%, rgba(201, 168, 76, 0.18) 0%, transparent 55%),
     linear-gradient(108deg,
-      rgba(5,  12, 25, 0.95) 0%,
-      rgba(7,  16, 31, 0.88) 30%,
-      rgba(7,  16, 31, 0.70) 55%,
-      rgba(7,  16, 31, 0.45) 75%,
-      rgba(7,  16, 31, 0.25) 100%
+      rgba(5,  12, 25, 0.88) 0%,
+      rgba(7,  16, 31, 0.78) 30%,
+      rgba(7,  16, 31, 0.60) 55%,
+      rgba(7,  16, 31, 0.38) 75%,
+      rgba(7,  16, 31, 0.20) 100%
     );
   z-index: 1;
   pointer-events: none;
@@ -546,6 +546,24 @@ img { max-width: 100%; display: block; }
 }
 
 .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Ghost pulse on hero CTAs */
+.hero__actions .btn--gold {
+  animation: shimmer 4s ease infinite, ghostGold 2.5s ease-in-out infinite;
+}
+.hero__actions .btn--outline {
+  animation: ghostWhite 2.5s ease-in-out infinite 1.2s;
+}
+@keyframes ghostGold {
+  0%   { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.70), 0 2px 20px rgba(201,168,76,0.25); }
+  60%  { box-shadow: 0 0 0 14px rgba(201, 168, 76, 0),  0 2px 20px rgba(201,168,76,0.25); }
+  100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0),    0 2px 20px rgba(201,168,76,0.25); }
+}
+@keyframes ghostWhite {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.40); }
+  60%  { box-shadow: 0 0 0 12px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);   }
+}
 
 /* Stats — right column, 2×2 grid */
 .hero__stats {
