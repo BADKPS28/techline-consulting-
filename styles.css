@@ -331,13 +331,13 @@ img { max-width: 100%; display: block; }
 
 /* techline1 — skyline office */
 .hero__img--1 {
-  background: url('techline1.jpeg') center / cover no-repeat;
+  background: url('Techline1.jpeg') center / cover no-repeat;
   animation: kenBurns1 60s ease-in-out infinite, imgFade1 60s ease-in-out infinite;
 }
 
 /* techline2 — boardroom */
 .hero__img--2 {
-  background: url('techline2.jpeg') center / cover no-repeat;
+  background: url('Techline2.jpeg') center / cover no-repeat;
   animation: kenBurns2 60s ease-in-out infinite, imgFade2 60s ease-in-out infinite;
 }
 
@@ -455,7 +455,7 @@ img { max-width: 100%; display: block; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('techline2.jpeg') center / cover no-repeat;
+  background: url('Techline2.jpeg') center / cover no-repeat;
   opacity: 0.06;
   z-index: 0;
   pointer-events: none;
