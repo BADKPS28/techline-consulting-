@@ -311,75 +311,54 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background:
-    /* TechLine gold — primary glow, left side behind the headline */
-    radial-gradient(ellipse 75% 70% at -5% 50%,  rgba(201, 168, 76, 0.32) 0%, rgba(180, 140, 40, 0.10) 40%, transparent 62%),
-    /* Secondary gold warmth — lower left */
-    radial-gradient(ellipse 35% 30% at 20% 85%,  rgba(201, 168, 76, 0.10) 0%, transparent 55%),
-    /* Deep navy-blue — top right corner */
-    radial-gradient(ellipse 65% 60% at 105% 5%,  rgba(18,  50, 130, 0.75) 0%, transparent 55%),
-    /* Depth layer — bottom center */
-    radial-gradient(ellipse 90% 40% at 50%  110%, rgba(4,   8,  20, 0.90) 0%, transparent 50%),
-    /* Subtle mid-tone — keeps center from going flat */
-    radial-gradient(ellipse 50% 55% at 55%  45%,  rgba(10,  22,  50, 0.45) 0%, transparent 60%),
-    /* Animated base — cycles through 5 deep tones */
-    linear-gradient(-45deg, #050c18, #0b1a32, #07101f, #09102a, #060e1a);
-  background-size: 100%, 100%, 100%, 100%, 100%, 500% 500%;
-  animation: heroColorShift 22s ease infinite;
+  background-image: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=1920&q=85');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-@keyframes heroColorShift {
-  0%   { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0%   50%; }
-  25%  { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 50%  0%;  }
-  50%  { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 100% 50%; }
-  75%  { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 50%  100%; }
-  100% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0%   50%; }
-}
-
-/* Floating gold orb — drifts slowly over the base */
+/* Dark overlay to keep text readable over image */
 .hero__overlay {
   position: absolute;
-  inset: -15%;
-  background:
-    radial-gradient(ellipse 50% 55% at 25% 50%, rgba(201, 168, 76, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 35% 40% at 80% 25%, rgba(60, 110, 210, 0.10) 0%, transparent 55%);
+  inset: 0;
+  background: linear-gradient(
+    108deg,
+    rgba(7, 16, 31, 0.92) 0%,
+    rgba(7, 16, 31, 0.80) 40%,
+    rgba(7, 16, 31, 0.55) 70%,
+    rgba(7, 16, 31, 0.30) 100%
+  );
   z-index: 0;
-  animation: orbFloat 24s ease-in-out infinite alternate;
-  will-change: transform;
   pointer-events: none;
 }
 
 @keyframes orbFloat {
   0%   { transform: translate(0px,   0px)  scale(1);    }
-  33%  { transform: translate(25px, -30px) scale(1.06); }
-  66%  { transform: translate(-18px, 20px) scale(0.96); }
-  100% { transform: translate(30px, -40px) scale(1.10); }
+  50%  { transform: translate(20px, -25px) scale(1.05); }
+  100% { transform: translate(-15px, 15px) scale(0.97); }
 }
 
-/* Diagonal light beam — TechLine gold streak across the hero */
+/* Diagonal gold beam */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(108deg,
-      transparent 0%,
-      transparent 38%,
-      rgba(201, 168, 76, 0.04) 42%,
-      rgba(201, 168, 76, 0.07) 44%,
-      rgba(201, 168, 76, 0.04) 46%,
-      transparent 50%,
-      transparent 100%
-    ),
-    radial-gradient(ellipse 55% 50% at 102% 92%, rgba(15, 40, 100, 0.55) 0%, transparent 55%);
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(201, 168, 76, 0.06) 40%,
+    rgba(201, 168, 76, 0.12) 45%,
+    rgba(201, 168, 76, 0.06) 50%,
+    transparent 60%
+  );
   z-index: 0;
   pointer-events: none;
-  animation: beamPulse 8s ease-in-out infinite alternate;
+  animation: beamPulse 6s ease-in-out infinite alternate;
 }
 
 @keyframes beamPulse {
-  0%   { opacity: 0.6; }
-  100% { opacity: 1.0; }
+  0%   { opacity: 0.5; transform: translateX(-20px); }
+  100% { opacity: 1.0; transform: translateX(20px);  }
 }
 
 /* Bottom fade into next section */
