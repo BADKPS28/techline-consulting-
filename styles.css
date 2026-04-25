@@ -584,7 +584,8 @@ img { max-width: 100%; display: block; }
 .audience__card--employer:hover { background: #F9FBFF; }
 .audience__card--candidate { background: var(--bg-light); }
 .audience__card--candidate:hover { background: #EEF2FA; }
-.audience__icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.audience__icon { width: 44px; height: 44px; margin-bottom: 1.5rem; color: var(--gold); }
+.audience__icon svg { width: 44px; height: 44px; }
 .audience__card h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.9rem;
@@ -764,7 +765,9 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 16px 48px rgba(0,0,0,0.3), 0 0 0 1px var(--border-gold);
 }
 .industry-card:hover::after { opacity: 1; }
-.industry-card__icon { font-size: 1.75rem; margin-bottom: 1rem; }
+.industry-card__icon { width: 28px; height: 28px; margin-bottom: 1rem; color: var(--gold); }
+.industry-card__icon svg { width: 28px; height: 28px; }
+.pin-icon { width: 13px; height: 13px; display: inline-block; vertical-align: middle; margin-right: 3px; color: var(--dark-muted); }
 .industry-card h4 { font-size: 0.875rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
 .industry-card p  { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
 

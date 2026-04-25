@@ -14,6 +14,20 @@
 </head>
 <body>
 
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="icon-tech" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="icon-finance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+  <symbol id="icon-health" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="icon-legal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+  <symbol id="icon-realestate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></symbol>
+  <symbol id="icon-logistics" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></symbol>
+  <symbol id="icon-marketing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+  <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="icon-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+</svg>
+
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav__inner">
@@ -108,7 +122,7 @@
   <section class="audience">
     <div class="container audience__grid">
       <div class="audience__card audience__card--employer fade-up">
-        <div class="audience__icon">🏢</div>
+        <div class="audience__icon"><svg aria-hidden="true"><use href="#icon-briefcase"/></svg></div>
         <h2>I'm Looking to Hire</h2>
         <p>Find pre-vetted, high-quality candidates matched to your culture, timeline, and budget. No sorting through hundreds of resumes.</p>
         <ul class="audience__list">
@@ -123,7 +137,7 @@
         <span>or</span>
       </div>
       <div class="audience__card audience__card--candidate fade-up fade-up--delay">
-        <div class="audience__icon">👤</div>
+        <div class="audience__icon"><svg aria-hidden="true"><use href="#icon-user"/></svg></div>
         <h2>I'm Looking for Work</h2>
         <p>Access exclusive roles at top South Florida companies. We advocate for your career — not just your resume.</p>
         <ul class="audience__list">
@@ -218,42 +232,42 @@
       <h2 class="section__title fade-up">Deep expertise across the sectors that matter.</h2>
       <div class="industries__grid">
         <div class="industry-card fade-up">
-          <div class="industry-card__icon">💻</div>
+          <div class="industry-card__icon"><svg aria-hidden="true"><use href="#icon-tech"/></svg></div>
           <h4>Technology & IT</h4>
           <p>Software engineers, DevOps, data, cybersecurity, and infrastructure roles.</p>
         </div>
         <div class="industry-card fade-up">
-          <div class="industry-card__icon">💰</div>
+          <div class="industry-card__icon"><svg aria-hidden="true"><use href="#icon-finance"/></svg></div>
           <h4>Finance & Accounting</h4>
           <p>CFOs, controllers, analysts, and operations professionals.</p>
         </div>
         <div class="industry-card fade-up">
-          <div class="industry-card__icon">🏥</div>
+          <div class="industry-card__icon"><svg aria-hidden="true"><use href="#icon-health"/></svg></div>
           <h4>Healthcare</h4>
           <p>Administrative, clinical support, billing, and operations talent.</p>
         </div>
         <div class="industry-card fade-up">
-          <div class="industry-card__icon">⚖️</div>
+          <div class="industry-card__icon"><svg aria-hidden="true"><use href="#icon-legal"/></svg></div>
           <h4>Legal</h4>
           <p>Paralegals, legal assistants, compliance officers, and firm support.</p>
         </div>
         <div class="industry-card fade-up">
-          <div class="industry-card__icon">🏗️</div>
+          <div class="industry-card__icon"><svg aria-hidden="true"><use href="#icon-realestate"/></svg></div>
           <h4>Real Estate</h4>
           <p>Property management, development, and real estate operations teams.</p>
         </div>
         <div class="industry-card fade-up">
-          <div class="industry-card__icon">📦</div>
+          <div class="industry-card__icon"><svg aria-hidden="true"><use href="#icon-logistics"/></svg></div>
           <h4>Logistics & Operations</h4>
           <p>Supply chain, warehouse, and operations management professionals.</p>
         </div>
         <div class="industry-card fade-up">
-          <div class="industry-card__icon">📣</div>
+          <div class="industry-card__icon"><svg aria-hidden="true"><use href="#icon-marketing"/></svg></div>
           <h4>Marketing & Creative</h4>
           <p>Digital marketers, designers, content strategists, and brand managers.</p>
         </div>
         <div class="industry-card fade-up">
-          <div class="industry-card__icon">🌎</div>
+          <div class="industry-card__icon"><svg aria-hidden="true"><use href="#icon-globe"/></svg></div>
           <h4>Nearshore & Latin America</h4>
           <p>Bilingual professionals and LATAM talent in compatible time zones.</p>
         </div>
@@ -514,7 +528,7 @@
           <div class="job-card__header">
             <div>
               <h4>Software Engineer</h4>
-              <span class="job-card__location">📍 Miami, FL</span>
+              <span class="job-card__location"><svg class="pin-icon" aria-hidden="true"><use href="#icon-pin"/></svg>Miami, FL</span>
             </div>
             <span class="job-card__type">Contract</span>
           </div>
@@ -525,7 +539,7 @@
           <div class="job-card__header">
             <div>
               <h4>Financial Analyst</h4>
-              <span class="job-card__location">📍 Fort Lauderdale, FL</span>
+              <span class="job-card__location"><svg class="pin-icon" aria-hidden="true"><use href="#icon-pin"/></svg>Fort Lauderdale, FL</span>
             </div>
             <span class="job-card__type">Direct Hire</span>
           </div>
@@ -536,7 +550,7 @@
           <div class="job-card__header">
             <div>
               <h4>IT Project Manager</h4>
-              <span class="job-card__location">📍 Boca Raton, FL</span>
+              <span class="job-card__location"><svg class="pin-icon" aria-hidden="true"><use href="#icon-pin"/></svg>Boca Raton, FL</span>
             </div>
             <span class="job-card__type job-card__type--cth">Contract-to-Hire</span>
           </div>
@@ -547,7 +561,7 @@
           <div class="job-card__header">
             <div>
               <h4>Bilingual Operations Manager</h4>
-              <span class="job-card__location">📍 Nearshore / Remote</span>
+              <span class="job-card__location"><svg class="pin-icon" aria-hidden="true"><use href="#icon-pin"/></svg>Nearshore / Remote</span>
             </div>
             <span class="job-card__type job-card__type--near">Nearshore</span>
           </div>
