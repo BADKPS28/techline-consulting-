@@ -1,3 +1,15 @@
+// Hero image slideshow — all 4 images, crossfade every 30s
+const heroImgs = document.querySelectorAll('.hero__img');
+if (heroImgs.length) {
+  let current = 0;
+  heroImgs[0].style.opacity = '1';
+  setInterval(() => {
+    heroImgs[current].style.opacity = '0';
+    current = (current + 1) % heroImgs.length;
+    heroImgs[current].style.opacity = '1';
+  }, 30000);
+}
+
 // Sticky nav shadow + back to top
 const nav = document.getElementById('nav');
 const backToTop = document.getElementById('backToTop');

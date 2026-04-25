@@ -329,33 +329,38 @@ img { max-width: 100%; display: block; }
   will-change: transform, opacity;
 }
 
-/* techline1 — skyline office */
+/* techline1 — skyline office — visible first */
 .hero__img--1 {
   background: url('Techline1.jpeg') center / cover no-repeat;
-  animation: kenBurns1 60s ease-in-out infinite, imgFade1 60s ease-in-out infinite;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  animation: kenBurns1 30s ease-in-out infinite alternate;
 }
 
-/* techline2 — boardroom */
+/* techline2 — boardroom — hidden first */
 .hero__img--2 {
   background: url('Techline2.jpeg') center / cover no-repeat;
-  animation: kenBurns2 60s ease-in-out infinite, imgFade2 60s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  animation: kenBurns2 30s ease-in-out infinite alternate;
 }
 
-/* Image 1: visible 0-30s, fades out, comes back at 60s */
-@keyframes imgFade1 {
-  0%,  42% { opacity: 1; }
-  50%, 92% { opacity: 0; }
-  100%     { opacity: 1; }
+/* techline3 — logo card */
+.hero__img--3 {
+  background: url('Techline3.jpeg') center / cover no-repeat;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  animation: kenBurns1 30s ease-in-out infinite alternate;
 }
 
-/* Image 2: hidden 0-30s, fades in, fades back at 60s */
-@keyframes imgFade2 {
-  0%,  42% { opacity: 0; }
-  50%, 92% { opacity: 1; }
-  100%     { opacity: 0; }
+/* techline4 — logo clean */
+.hero__img--4 {
+  background: url('Techline4.jpeg') center / cover no-repeat;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  animation: kenBurns2 30s ease-in-out infinite alternate;
 }
 
-/* Ken Burns — img1 zooms in, img2 zooms out (opposite directions) */
 @keyframes kenBurns1 {
   0%   { transform: scale(1)    translate(0%,    0%); }
   100% { transform: scale(1.12) translate(-2.5%, -2%); }
