@@ -221,6 +221,13 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.03em;
   flex-shrink: 0;
 }
+.nav__logo-img {
+  height: 38px;
+  width: auto;
+  filter: invert(1) brightness(1.2);
+  transition: opacity var(--t);
+}
+.nav__logo-img:hover { opacity: 0.85; }
 .nav__logo-tech { color: var(--white); }
 .nav__logo-line { color: var(--gold); }
 .nav__logo-sub {
@@ -322,15 +329,15 @@ img { max-width: 100%; display: block; }
   will-change: transform, opacity;
 }
 
-/* Techline2.png — dark architectural */
+/* techline1 — skyline office */
 .hero__img--1 {
-  background: url('Techline2.png') center / cover no-repeat;
+  background: url('techline1.jpeg') center / cover no-repeat;
   animation: kenBurns1 60s ease-in-out infinite, imgFade1 60s ease-in-out infinite;
 }
 
-/* Techline.png — light geometric */
+/* techline2 — boardroom */
 .hero__img--2 {
-  background: url('Techline.png') center / cover no-repeat;
+  background: url('techline2.jpeg') center / cover no-repeat;
   animation: kenBurns2 60s ease-in-out infinite, imgFade2 60s ease-in-out infinite;
 }
 
@@ -448,7 +455,7 @@ img { max-width: 100%; display: block; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('Techline.png') center / cover no-repeat;
+  background: url('techline2.jpeg') center / cover no-repeat;
   opacity: 0.06;
   z-index: 0;
   pointer-events: none;
@@ -1500,6 +1507,13 @@ img { max-width: 100%; display: block; }
   margin-bottom: 2.5rem;
 }
 .footer__brand { display: flex; flex-direction: column; gap: 1.25rem; }
+.footer__logo-img {
+  height: 42px;
+  width: auto;
+  filter: invert(1) brightness(1.1);
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
 .footer__tagline { color: var(--text-faint); font-style: italic; font-size: 0.82rem; line-height: 1.65; }
 .footer__social { display: flex; gap: 0.5rem; }
 .social-link {
