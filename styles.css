@@ -318,10 +318,10 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 85% 75% at -5% 45%,  rgba(201, 168, 76, 0.13) 0%, transparent 55%),
-    radial-gradient(ellipse 65% 55% at 105%  5%,  rgba(8,  18,  48, 0.95) 0%, transparent 55%),
-    radial-gradient(ellipse 55% 50% at  55% 105%, rgba(11, 25,  58, 0.65) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 40% at  80%  60%, rgba(201, 168, 76, 0.05) 0%, transparent 50%);
+    radial-gradient(ellipse 70% 60% at 0%   50%,  rgba(201, 168, 76, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 50% at 100% 10%,  rgba(30,  60, 120, 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 45% at 60%  100%, rgba(15,  35,  80, 0.60) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 35% at 75%  55%,  rgba(201, 168, 76, 0.10) 0%, transparent 50%);
   z-index: 0;
   animation: auraFloat 16s ease-in-out infinite alternate;
   will-change: transform;
