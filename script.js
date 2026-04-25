@@ -1,7 +1,12 @@
-// Sticky nav shadow
+// Sticky nav shadow + back to top
 const nav = document.getElementById('nav');
+const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 20);
+  backToTop.classList.toggle('visible', window.scrollY > 300);
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Mobile menu
@@ -24,6 +29,35 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Stat counter animation
+const statEls = document.querySelectorAll('.stat__number');
+statEls.forEach(el => {
+  const suffix = el.querySelector('span');
+  el.dataset.suffix = suffix ? suffix.textContent : '';
+  el.dataset.target = parseInt(el.textContent.match(/\d+/)[0]);
+});
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseInt(el.dataset.target);
+    const suffix = el.dataset.suffix;
+    const duration = 1600;
+    const startTime = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.innerHTML = Math.round(eased * target) + '<span>' + suffix + '</span>';
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    counterObserver.unobserve(el);
+  });
+}, { threshold: 0.6 });
+
+statEls.forEach(el => counterObserver.observe(el));
 
 // Contact form tab switching
 function switchTab(type, btn) {

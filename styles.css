@@ -150,6 +150,8 @@ img { max-width: 100%; display: block; }
 .section--white { background: var(--white); }
 .section--dark  { background: var(--bg); }
 .section--dark2 { background: var(--bg-2); }
+.section--gray  { background: var(--bg-2); }
+.section--accent { background: linear-gradient(135deg, var(--bg-3) 0%, #0D2347 100%); }
 
 .section__eyebrow {
   display: inline-flex;
@@ -1148,6 +1150,32 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   background: var(--gold-dim);
 }
+
+/* ── Back to top ── */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--gold);
+  color: var(--dark-text);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--t), transform var(--t), background var(--t), box-shadow var(--t);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+.back-to-top:hover { background: var(--gold-2); transform: translateY(-3px); box-shadow: var(--shadow-gold); }
 
 /* ── Footer ── */
 .footer { background: #030810; border-top: 1px solid rgba(255,255,255,0.05); padding: 5rem 0 2.5rem; }
