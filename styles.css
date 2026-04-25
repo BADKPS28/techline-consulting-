@@ -312,27 +312,74 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 65% 70% at 5%   50%,  rgba(201, 168, 76, 0.30) 0%, transparent 55%),
-    radial-gradient(ellipse 65% 55% at 95%  10%,  rgba(20,  50, 110, 0.80) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 50% at 60%  100%, rgba(14,  32,  75, 0.65) 0%, transparent 55%),
-    radial-gradient(ellipse 35% 35% at 75%  55%,  rgba(201, 168, 76, 0.10) 0%, transparent 50%),
-    linear-gradient(135deg, #060e1a 0%, #0a1830 50%, #07101F 100%);
+    /* TechLine gold — primary glow, left side behind the headline */
+    radial-gradient(ellipse 75% 70% at -5% 50%,  rgba(201, 168, 76, 0.32) 0%, rgba(180, 140, 40, 0.10) 40%, transparent 62%),
+    /* Secondary gold warmth — lower left */
+    radial-gradient(ellipse 35% 30% at 20% 85%,  rgba(201, 168, 76, 0.10) 0%, transparent 55%),
+    /* Deep navy-blue — top right corner */
+    radial-gradient(ellipse 65% 60% at 105% 5%,  rgba(18,  50, 130, 0.75) 0%, transparent 55%),
+    /* Depth layer — bottom center */
+    radial-gradient(ellipse 90% 40% at 50%  110%, rgba(4,   8,  20, 0.90) 0%, transparent 50%),
+    /* Subtle mid-tone — keeps center from going flat */
+    radial-gradient(ellipse 50% 55% at 55%  45%,  rgba(10,  22,  50, 0.45) 0%, transparent 60%),
+    /* Animated base — cycles through 5 deep tones */
+    linear-gradient(-45deg, #050c18, #0b1a32, #07101f, #09102a, #060e1a);
+  background-size: 100%, 100%, 100%, 100%, 100%, 500% 500%;
+  animation: heroColorShift 22s ease infinite;
 }
 
-/* Animated floating gold orb */
+@keyframes heroColorShift {
+  0%   { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0%   50%; }
+  25%  { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 50%  0%;  }
+  50%  { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 100% 50%; }
+  75%  { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 50%  100%; }
+  100% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0%   50%; }
+}
+
+/* Floating gold orb — drifts slowly over the base */
 .hero__overlay {
   position: absolute;
-  inset: -10%;
-  background: radial-gradient(ellipse 55% 55% at 25% 55%, rgba(201, 168, 76, 0.13) 0%, transparent 60%);
+  inset: -15%;
+  background:
+    radial-gradient(ellipse 50% 55% at 25% 50%, rgba(201, 168, 76, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 40% at 80% 25%, rgba(60, 110, 210, 0.10) 0%, transparent 55%);
   z-index: 0;
-  animation: auraFloat 16s ease-in-out infinite alternate;
+  animation: orbFloat 24s ease-in-out infinite alternate;
   will-change: transform;
   pointer-events: none;
 }
 
-@keyframes auraFloat {
-  0%   { transform: scale(1)    translate(0px,   0px); }
-  100% { transform: scale(1.1)  translate(20px, -25px); }
+@keyframes orbFloat {
+  0%   { transform: translate(0px,   0px)  scale(1);    }
+  33%  { transform: translate(25px, -30px) scale(1.06); }
+  66%  { transform: translate(-18px, 20px) scale(0.96); }
+  100% { transform: translate(30px, -40px) scale(1.10); }
+}
+
+/* Diagonal light beam — TechLine gold streak across the hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(108deg,
+      transparent 0%,
+      transparent 38%,
+      rgba(201, 168, 76, 0.04) 42%,
+      rgba(201, 168, 76, 0.07) 44%,
+      rgba(201, 168, 76, 0.04) 46%,
+      transparent 50%,
+      transparent 100%
+    ),
+    radial-gradient(ellipse 55% 50% at 102% 92%, rgba(15, 40, 100, 0.55) 0%, transparent 55%);
+  z-index: 0;
+  pointer-events: none;
+  animation: beamPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes beamPulse {
+  0%   { opacity: 0.6; }
+  100% { opacity: 1.0; }
 }
 
 /* Bottom fade into next section */
@@ -340,7 +387,7 @@ img { max-width: 100%; display: block; }
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 180px;
+  height: 200px;
   background: linear-gradient(to top, var(--bg), transparent);
   pointer-events: none;
   z-index: 1;
