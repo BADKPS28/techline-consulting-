@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechLine Consulting — South Florida's premier staffing firm. Contract, direct hire, nearshore, and PEO solutions. Hiring is 1% of your time and 100% of ours." />
+  <meta name="keywords" content="staffing, recruiting, South Florida, contract staffing, direct hire, nearshore, PEO, technology staffing" />
+  <title>TechLine Consulting | South Florida Staffing & Recruiting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-tech">Tech</span><span class="nav__logo-line">Line</span>
+        <span class="nav__logo-sub">CONSULTING</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#leadership">Team</a>
+        <a href="#jobs" class="nav__link--candidate">Find a Job</a>
+        <a href="#contact" class="nav__cta">Hire Talent</a>
+      </nav>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#services" onclick="closeMobile()">Services</a>
+      <a href="#industries" onclick="closeMobile()">Industries</a>
+      <a href="#leadership" onclick="closeMobile()">Team</a>
+      <a href="#jobs" onclick="closeMobile()">Find a Job</a>
+      <a href="#contact" onclick="closeMobile()" class="mobile__cta">Hire Talent</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__bg-grid"></div>
+    <div class="container hero__inner">
+      <div class="hero__content fade-up">
+        <p class="hero__eyebrow">South Florida's Premier Staffing Partner</p>
+        <h1 class="hero__headline">Hiring is <em>1%</em> of your time.<br />It's <em>100%</em> of ours.</h1>
+        <p class="hero__sub">Over 30 years of combined experience connecting South Florida businesses with exceptional talent — from contract roles to executive placements.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--gold">Hire Talent →</a>
+          <a href="#jobs" class="btn btn--outline">Find a Job →</a>
+        </div>
+      </div>
+      <div class="hero__stats fade-up fade-up--delay">
+        <div class="stat">
+          <span class="stat__number">30<span>+</span></span>
+          <span class="stat__label">Years Combined Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">48<span>h</span></span>
+          <span class="stat__label">Average First Submission</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">5<span>×</span></span>
+          <span class="stat__label">Staffing Solutions</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">100<span>%</span></span>
+          <span class="stat__label">Client Retention Focus</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>Contract Staffing</span><span class="sep">◆</span>
+      <span>Direct Hire</span><span class="sep">◆</span>
+      <span>Contract-to-Hire</span><span class="sep">◆</span>
+      <span>Nearshore Solutions</span><span class="sep">◆</span>
+      <span>PEO Services</span><span class="sep">◆</span>
+      <span>Executive Search</span><span class="sep">◆</span>
+      <span>Technology Staffing</span><span class="sep">◆</span>
+      <span>Finance & Accounting</span><span class="sep">◆</span>
+      <span>Contract Staffing</span><span class="sep">◆</span>
+      <span>Direct Hire</span><span class="sep">◆</span>
+      <span>Contract-to-Hire</span><span class="sep">◆</span>
+      <span>Nearshore Solutions</span><span class="sep">◆</span>
+      <span>PEO Services</span><span class="sep">◆</span>
+      <span>Executive Search</span><span class="sep">◆</span>
+      <span>Technology Staffing</span><span class="sep">◆</span>
+      <span>Finance & Accounting</span><span class="sep">◆</span>
+    </div>
+  </div>
+
+  <!-- DUAL AUDIENCE -->
+  <section class="audience">
+    <div class="container audience__grid">
+      <div class="audience__card audience__card--employer fade-up">
+        <div class="audience__icon">🏢</div>
+        <h2>I'm Looking to Hire</h2>
+        <p>Find pre-vetted, high-quality candidates matched to your culture, timeline, and budget. No sorting through hundreds of resumes.</p>
+        <ul class="audience__list">
+          <li>Contract & contract-to-hire</li>
+          <li>Direct hire & executive search</li>
+          <li>Nearshore staffing</li>
+          <li>PEO & HR co-employment</li>
+        </ul>
+        <a href="#contact" class="btn btn--gold">Start Hiring →</a>
+      </div>
+      <div class="audience__divider">
+        <span>or</span>
+      </div>
+      <div class="audience__card audience__card--candidate fade-up fade-up--delay">
+        <div class="audience__icon">👤</div>
+        <h2>I'm Looking for Work</h2>
+        <p>Access exclusive roles at top South Florida companies. We advocate for your career — not just your resume.</p>
+        <ul class="audience__list">
+          <li>Tech & IT roles</li>
+          <li>Finance & accounting</li>
+          <li>Contract & permanent positions</li>
+          <li>Nearshore opportunities</li>
+        </ul>
+        <a href="#jobs" class="btn btn--navy">View Open Roles →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text fade-up">
+          <p class="section__eyebrow">Who We Are</p>
+          <h2 class="section__title">A staffing partner built on relationships, not transactions.</h2>
+          <p>TechLine Consulting is a South Florida-based staffing firm with over 30 years of combined expertise. We specialize in connecting businesses with the right professionals — across every engagement model from contract to executive direct hire.</p>
+          <p>We don't just fill roles. We understand your business, your culture, and what success looks like for your team. That's why our clients keep coming back — and why they refer us to others.</p>
+          <a href="#contact" class="btn btn--gold" style="margin-top:1.75rem;display:inline-block;">Talk to Us →</a>
+        </div>
+        <div class="about__pillars fade-up fade-up--delay">
+          <div class="pillar">
+            <div class="pillar__icon">◈</div>
+            <h4>Rigorous Screening</h4>
+            <p>Every candidate is vetted through a multi-stage process before they reach your desk.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon">◈</div>
+            <h4>Radical Transparency</h4>
+            <p>Clear communication at every step — no surprises, no runaround, no ghosting.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon">◈</div>
+            <h4>Post-Placement Support</h4>
+            <p>We stay engaged after placement to ensure long-term fit and continued success.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon">◈</div>
+            <h4>Proactive Partnership</h4>
+            <p>We anticipate your talent needs before they become urgent problems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TECHLINE -->
+  <section class="section section--gray" id="why">
+    <div class="container">
+      <div class="why__header fade-up">
+        <p class="section__eyebrow">Why TechLine</p>
+        <h2 class="section__title">Boutique quality. Enterprise capability.</h2>
+        <p class="why__sub">Big staffing firms send you to a junior recruiter who doesn't know your industry. We're different.</p>
+      </div>
+      <div class="why__grid">
+        <div class="why__card fade-up">
+          <div class="why__vs">
+            <div class="why__them">
+              <span class="why__label why__label--bad">Big Agencies</span>
+              <ul>
+                <li>Account managers who've never worked your industry</li>
+                <li>High turnover, new rep every 6 months</li>
+                <li>Resume spray — quantity over quality</li>
+                <li>Slow response times, generic communication</li>
+                <li>You're one of 500 clients</li>
+              </ul>
+            </div>
+            <div class="why__us">
+              <span class="why__label why__label--good">TechLine</span>
+              <ul>
+                <li>Founders directly involved in your search</li>
+                <li>Long-term relationships, we know your business</li>
+                <li>Curated shortlist — every candidate is right</li>
+                <li>48-hour first submission, real-time updates</li>
+                <li>You're a partner, not a ticket number</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="section" id="industries">
+    <div class="container">
+      <p class="section__eyebrow fade-up">Industries We Serve</p>
+      <h2 class="section__title fade-up">Deep expertise across the sectors that matter.</h2>
+      <div class="industries__grid">
+        <div class="industry-card fade-up">
+          <div class="industry-card__icon">💻</div>
+          <h4>Technology & IT</h4>
+          <p>Software engineers, DevOps, data, cybersecurity, and infrastructure roles.</p>
+        </div>
+        <div class="industry-card fade-up">
+          <div class="industry-card__icon">💰</div>
+          <h4>Finance & Accounting</h4>
+          <p>CFOs, controllers, analysts, and operations professionals.</p>
+        </div>
+        <div class="industry-card fade-up">
+          <div class="industry-card__icon">🏥</div>
+          <h4>Healthcare</h4>
+          <p>Administrative, clinical support, billing, and operations talent.</p>
+        </div>
+        <div class="industry-card fade-up">
+          <div class="industry-card__icon">⚖️</div>
+          <h4>Legal</h4>
+          <p>Paralegals, legal assistants, compliance officers, and firm support.</p>
+        </div>
+        <div class="industry-card fade-up">
+          <div class="industry-card__icon">🏗️</div>
+          <h4>Real Estate</h4>
+          <p>Property management, development, and real estate operations teams.</p>
+        </div>
+        <div class="industry-card fade-up">
+          <div class="industry-card__icon">📦</div>
+          <h4>Logistics & Operations</h4>
+          <p>Supply chain, warehouse, and operations management professionals.</p>
+        </div>
+        <div class="industry-card fade-up">
+          <div class="industry-card__icon">📣</div>
+          <h4>Marketing & Creative</h4>
+          <p>Digital marketers, designers, content strategists, and brand managers.</p>
+        </div>
+        <div class="industry-card fade-up">
+          <div class="industry-card__icon">🌎</div>
+          <h4>Nearshore & Latin America</h4>
+          <p>Bilingual professionals and LATAM talent in compatible time zones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--dark" id="services">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--gold fade-up">What We Offer</p>
+      <h2 class="section__title section__title--light fade-up">Every engagement model. One trusted partner.</h2>
+      <div class="services__grid">
+        <div class="service-card fade-up">
+          <div class="service-card__num">01</div>
+          <h3>Contract Staffing</h3>
+          <p>Flexible talent for project-based work, peak seasons, or temporary coverage — without the overhead of permanent hiring.</p>
+          <a href="#contact" class="service-card__link">Learn more →</a>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-card__num">02</div>
+          <h3>Contract-to-Hire</h3>
+          <p>Try before you commit. Bring talent on contract with the option to convert to full-time once you've seen them perform.</p>
+          <a href="#contact" class="service-card__link">Learn more →</a>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-card__num">03</div>
+          <h3>Direct Hire</h3>
+          <p>When you need the right person permanently. We handle the search, screening, and delivery — you make the final call.</p>
+          <a href="#contact" class="service-card__link">Learn more →</a>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-card__num">04</div>
+          <h3>Nearshore Staffing</h3>
+          <p>Access top Latin American talent in compatible time zones. Same quality, significantly reduced cost, seamless collaboration.</p>
+          <a href="#contact" class="service-card__link">Learn more →</a>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-card__num">05</div>
+          <h3>PEO Services</h3>
+          <p>We become your co-employer, managing HR, payroll, benefits, and compliance — so you stay focused on your business.</p>
+          <a href="#contact" class="service-card__link">Learn more →</a>
+        </div>
+        <div class="service-card service-card--cta fade-up">
+          <h3>Not sure which fits?</h3>
+          <p>We'll assess your situation and recommend the right model — no pressure, no jargon, no obligation.</p>
+          <a href="#contact" class="btn btn--gold">Talk to an Expert →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process">
+    <div class="container">
+      <p class="section__eyebrow fade-up">How We Work</p>
+      <h2 class="section__title fade-up">From conversation to placement — fast.</h2>
+      <div class="process__steps">
+        <div class="process__step fade-up">
+          <div class="process__number">01</div>
+          <div class="process__content">
+            <h3>Understand Your Needs</h3>
+            <p>We start with a deep consultation — your team, culture, timeline, and what success looks like for this hire. No generic job descriptions. No box-checking.</p>
+          </div>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step fade-up">
+          <div class="process__number">02</div>
+          <div class="process__content">
+            <h3>Source & Screen</h3>
+            <p>We tap our network, run targeted outreach, and vet rigorously. You receive a curated shortlist within 48 hours — not a flood of unqualified resumes.</p>
+          </div>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step fade-up">
+          <div class="process__number">03</div>
+          <div class="process__content">
+            <h3>Deliver & Stay Engaged</h3>
+            <p>We coordinate interviews, manage offers, and support onboarding. The relationship doesn't end at placement — we're your long-term talent partner.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS - CLIENTS -->
+  <section class="section section--gray" id="testimonials">
+    <div class="container">
+      <p class="section__eyebrow fade-up">Client Reviews</p>
+      <h2 class="section__title fade-up">What our clients say.</h2>
+      <div class="testimonials__grid">
+        <div class="testimonial fade-up">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__quote">"TechLine filled a critical engineering role in under a week. Every candidate they sent was actually qualified — no wasted interviews, no runaround. I've never had that experience with a staffing firm before."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">MR</div>
+            <div>
+              <strong>Michael R.</strong>
+              <span>VP of Engineering, South Florida Tech Firm</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-up">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__quote">"We tried two national agencies before TechLine. Night and day difference. They took the time to actually understand our company culture before sending a single resume. That attention to detail shows."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">SL</div>
+            <div>
+              <strong>Sarah L.</strong>
+              <span>HR Director, Financial Services</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-up">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__quote">"The nearshore team TechLine placed for us has been exceptional. Same timezone, same quality — and the cost savings let us double the team size. I wish we'd found them sooner."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">DM</div>
+            <div>
+              <strong>Daniel M.</strong>
+              <span>COO, Real Estate Development Group</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS - CANDIDATES -->
+  <section class="section section--dark" id="candidate-testimonials">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--gold fade-up">Candidate Reviews</p>
+      <h2 class="section__title section__title--light fade-up">We take care of our candidates too.</h2>
+      <div class="testimonials__grid">
+        <div class="testimonial testimonial--dark fade-up">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__quote">"Most recruiters send your resume out and disappear. TechLine kept me in the loop every step of the way and actually coached me for the interview. I landed the role and doubled my salary."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar testimonial__avatar--gold">JT</div>
+            <div>
+              <strong>James T.</strong>
+              <span>Software Engineer, placed in Miami</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial testimonial--dark fade-up">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__quote">"I was nervous about making a career move after 6 years at the same company. Ryan walked me through every step and made sure the role was genuinely the right fit — not just a quick placement."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar testimonial__avatar--gold">AC</div>
+            <div>
+              <strong>Ana C.</strong>
+              <span>Finance Manager, placed in Fort Lauderdale</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial testimonial--dark fade-up">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__quote">"As a bilingual professional, TechLine opened doors I didn't know existed through their nearshore network. They understood exactly what I was looking for and delivered."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar testimonial__avatar--gold">RG</div>
+            <div>
+              <strong>Ricardo G.</strong>
+              <span>Operations Lead, nearshore placement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERRAL NETWORK -->
+  <section class="section section--accent">
+    <div class="container referral__grid">
+      <div class="referral__text fade-up">
+        <p class="section__eyebrow section__eyebrow--gold">Referral Network</p>
+        <h2 class="section__title section__title--light">Built on trust. Powered by relationships.</h2>
+        <p style="color: rgba(255,255,255,0.8);line-height:1.7;">Our referral network means you get candidates who arrive pre-vetted by people we trust — faster acquisition, higher quality, and access to professionals who aren't on any job board.</p>
+        <a href="#contact" class="btn btn--gold" style="margin-top:2rem;display:inline-block;">Build Your Team →</a>
+      </div>
+      <div class="referral__cards fade-up fade-up--delay">
+        <div class="referral__card">
+          <span class="referral__card-icon">⚡</span>
+          <div>
+            <h4>Faster Acquisition</h4>
+            <p>Warm referrals move faster than cold applications — less time-to-fill, less disruption.</p>
+          </div>
+        </div>
+        <div class="referral__card">
+          <span class="referral__card-icon">✓</span>
+          <div>
+            <h4>Quality Assurance</h4>
+            <p>Referred candidates arrive with built-in accountability and verified track records.</p>
+          </div>
+        </div>
+        <div class="referral__card">
+          <span class="referral__card-icon">◎</span>
+          <div>
+            <h4>Passive Talent Access</h4>
+            <p>Reach candidates who aren't on job boards but are open to the right opportunity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOB SEEKERS -->
+  <section class="section jobs" id="jobs">
+    <div class="container">
+      <div class="jobs__header fade-up">
+        <p class="section__eyebrow">For Job Seekers</p>
+        <h2 class="section__title">Your next great role starts here.</h2>
+        <p class="jobs__sub">We work with top South Florida companies across tech, finance, healthcare, legal, and more. Submit your resume and we'll match you to open roles — confidentially.</p>
+      </div>
+      <div class="jobs__cards">
+        <div class="job-card fade-up">
+          <div class="job-card__header">
+            <div>
+              <h4>Software Engineer</h4>
+              <span class="job-card__location">📍 Miami, FL</span>
+            </div>
+            <span class="job-card__type">Contract</span>
+          </div>
+          <p>Full-stack development role with a growing SaaS company. React, Node.js, AWS experience preferred.</p>
+          <a href="#contact" class="job-card__link">Apply Now →</a>
+        </div>
+        <div class="job-card fade-up">
+          <div class="job-card__header">
+            <div>
+              <h4>Financial Analyst</h4>
+              <span class="job-card__location">📍 Fort Lauderdale, FL</span>
+            </div>
+            <span class="job-card__type">Direct Hire</span>
+          </div>
+          <p>Join a well-established financial services firm. 3+ years experience in FP&A, strong Excel and modeling skills required.</p>
+          <a href="#contact" class="job-card__link">Apply Now →</a>
+        </div>
+        <div class="job-card fade-up">
+          <div class="job-card__header">
+            <div>
+              <h4>IT Project Manager</h4>
+              <span class="job-card__location">📍 Boca Raton, FL</span>
+            </div>
+            <span class="job-card__type job-card__type--cth">Contract-to-Hire</span>
+          </div>
+          <p>Lead technology transformation projects for a regional healthcare organization. PMP or CAPM preferred.</p>
+          <a href="#contact" class="job-card__link">Apply Now →</a>
+        </div>
+        <div class="job-card fade-up">
+          <div class="job-card__header">
+            <div>
+              <h4>Bilingual Operations Manager</h4>
+              <span class="job-card__location">📍 Nearshore / Remote</span>
+            </div>
+            <span class="job-card__type job-card__type--near">Nearshore</span>
+          </div>
+          <p>Manage day-to-day operations for a US-based client. English/Spanish fluency required, LATAM-based candidates welcome.</p>
+          <a href="#contact" class="job-card__link">Apply Now →</a>
+        </div>
+      </div>
+      <div class="jobs__cta fade-up">
+        <p>Don't see your role? Submit your resume and we'll reach out when the right match opens up.</p>
+        <a href="#contact" class="btn btn--gold">Submit Your Resume →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="section" id="leadership">
+    <div class="container">
+      <p class="section__eyebrow fade-up">Our Team</p>
+      <h2 class="section__title fade-up">The people behind TechLine.</h2>
+      <p class="leadership__sub fade-up">When you work with TechLine, you work directly with our leadership — not handed off to a junior coordinator.</p>
+      <div class="leadership__grid">
+        <div class="leader-card fade-up">
+          <div class="leader-card__avatar">JB</div>
+          <div class="leader-card__info">
+            <h3>Joshua Brossmann</h3>
+            <p class="leader-card__title">Founder & CEO</p>
+            <p>Nearly a decade of South Florida staffing experience. Joshua founded TechLine on the belief that great hiring is a relationship, not a transaction — and has built the firm's culture around that principle. He's directly involved in every client engagement.</p>
+            <a href="https://linkedin.com" target="_blank" class="leader-card__linkedin">LinkedIn →</a>
+          </div>
+        </div>
+        <div class="leader-card fade-up">
+          <div class="leader-card__avatar">RM</div>
+          <div class="leader-card__info">
+            <h3>Ryan Mousley</h3>
+            <p class="leader-card__title">Delivery Director</p>
+            <p>A recruiting and team leadership veteran, Ryan oversees all candidate delivery and ensures every placement meets TechLine's quality standard. His operational discipline and market knowledge consistently keep clients ahead of their hiring timelines.</p>
+            <a href="https://linkedin.com" target="_blank" class="leader-card__linkedin">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--dark" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__text fade-up">
+          <p class="section__eyebrow section__eyebrow--gold">Get In Touch</p>
+          <h2 class="section__title section__title--light">Ready to get started?</h2>
+          <p style="color:rgba(255,255,255,0.75);margin-bottom:2rem;line-height:1.75;">Whether you're hiring or looking for your next role, we respond within one business day. No automated responses — you'll hear from a real person.</p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <span class="contact__detail-icon">✉</span>
+              <a href="mailto:info@techline-consulting.com">info@techline-consulting.com</a>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-icon">☎</span>
+              <a href="tel:+19542971368">(954) 297-1368</a>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-icon">⌖</span>
+              <span>South Florida, USA</span>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-icon">in</span>
+              <a href="https://linkedin.com" target="_blank">Connect on LinkedIn →</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact__form-wrap fade-up fade-up--delay">
+          <div class="contact__tabs">
+            <button class="contact__tab active" onclick="switchTab('employer', this)">I'm Hiring</button>
+            <button class="contact__tab" onclick="switchTab('candidate', this)">I'm a Candidate</button>
+          </div>
+          <form class="contact__form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form__row">
+              <div class="form__field">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="John" />
+              </div>
+              <div class="form__field">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Smith" />
+              </div>
+            </div>
+            <div class="form__field">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="john@company.com" />
+            </div>
+            <div class="form__field" id="companyField">
+              <label for="company">Company *</label>
+              <input type="text" id="company" name="company" placeholder="Acme Corp" />
+            </div>
+            <div class="form__field" id="serviceField">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option>Contract Staffing</option>
+                <option>Contract-to-Hire</option>
+                <option>Direct Hire</option>
+                <option>Nearshore Staffing</option>
+                <option>PEO Services</option>
+                <option>Not Sure — Need Guidance</option>
+              </select>
+            </div>
+            <div class="form__field" id="roleField" style="display:none;">
+              <label for="role">Role / Field You're Seeking</label>
+              <input type="text" id="role" name="role" placeholder="e.g. Software Engineer, Financial Analyst..." />
+            </div>
+            <div class="form__field">
+              <label for="message" id="messageLabel">Tell Us About Your Hiring Need *</label>
+              <textarea id="message" name="message" required rows="4" placeholder="Describe the role(s), timeline, and any specifics..."></textarea>
+            </div>
+            <input type="hidden" id="formType" name="formType" value="employer" />
+            <button type="submit" class="btn btn--gold btn--full">Send Message →</button>
+            <div id="formSuccess" class="form__success" style="display:none;">
+              ✓ Message received! We'll be in touch within one business day.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="nav__logo-tech">Tech</span><span class="nav__logo-line">Line</span>
+            <span class="nav__logo-sub">CONSULTING</span>
+          </a>
+          <p class="footer__tagline">"Hiring is 1% of your time and 100% of ours."</p>
+          <div class="footer__social">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-link">in</a>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__col">
+            <h5>Company</h5>
+            <a href="#about">About Us</a>
+            <a href="#leadership">Our Team</a>
+            <a href="#why">Why TechLine</a>
+          </div>
+          <div class="footer__col">
+            <h5>Services</h5>
+            <a href="#services">Contract Staffing</a>
+            <a href="#services">Direct Hire</a>
+            <a href="#services">Nearshore</a>
+            <a href="#services">PEO Services</a>
+          </div>
+          <div class="footer__col">
+            <h5>Job Seekers</h5>
+            <a href="#jobs">Open Roles</a>
+            <a href="#contact">Submit Resume</a>
+            <a href="#industries">Industries</a>
+          </div>
+          <div class="footer__col">
+            <h5>Contact</h5>
+            <a href="mailto:info@techline-consulting.com">info@techline-consulting.com</a>
+            <a href="#contact">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 TechLine Consulting LLC. All rights reserved. | South Florida, USA</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
