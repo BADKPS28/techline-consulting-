@@ -1229,6 +1229,7 @@ img { max-width: 100%; display: block; }
 /* ── Leadership ── */
 .leadership__sub { color: var(--text-muted); margin-bottom: 4rem; max-width: 540px; font-size: 0.95rem; line-height: 1.75; }
 .leadership__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.leadership__grid--single { grid-template-columns: 1fr; max-width: 680px; margin: 0 auto; }
 .leader-card {
   background: rgba(255,255,255,0.04);
   border: 1px solid var(--border);
